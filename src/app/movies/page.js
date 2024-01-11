@@ -112,7 +112,7 @@ export default function medias() {
     }
 
     getAllMedias();
-  }, [loggedInAccount]);
+  }, [pageLoader, mediaData, session?.user?.uid, loggedInAccount]);
 
   if (session === null) return <UnauthPage />;
   if (loggedInAccount === null) return <ManageAccounts />;

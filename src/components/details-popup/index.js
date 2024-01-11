@@ -91,7 +91,7 @@ export default function DetailsPopup({ show, setShow }) {
 
       getMediaDetails();
     }
-  }, [currentMediaInfoIdAndType, loggedInAccount]);
+  }, [currentMediaInfoIdAndType, loggedInAccount, similarMedias, mediaDetails]);
 
   function handleClose() {
     setShow(false);

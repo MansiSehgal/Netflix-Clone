@@ -97,7 +97,7 @@ export default function Browse() {
     }
 
     getAllMedias();
-  }, []);
+  }, [pageLoader, mediaData, session?.user?.uid, loggedInAccount]);
 
   if (session === null) return <UnauthPage />;
   if (loggedInAccount === null) return <ManageAccounts />;
