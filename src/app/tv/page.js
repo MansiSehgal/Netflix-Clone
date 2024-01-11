@@ -1,3 +1,4 @@
+/* eslint-disable react-hooks/exhaustive-deps */
 "use client";
 
 import CircleLoader from "@/components/circle-loader";
@@ -95,7 +96,7 @@ export default function TV() {
     }
 
     getAllMedias();
-  }, [loggedInAccount?._id, setPageLoader, session?.user?.uid, setMediaData]);
+  }, [loggedInAccount]);
 
   if (session === null) return <UnauthPage />;
   if (loggedInAccount === null) return <ManageAccounts />;

@@ -1,3 +1,4 @@
+/* eslint-disable react-hooks/exhaustive-deps */
 "use client";
 
 import { GlobalContext } from "@/context";
@@ -41,7 +42,7 @@ export default function MyList() {
     }
 
     extractFavorites();
-  }, [loggedInAccount?._id, setPageLoader, session?.user?.uid, setMediaData]);
+  }, [loggedInAccount]);
 
   if (session === null) return <UnauthPage />;
   if (loggedInAccount === null) return <ManageAccounts />;

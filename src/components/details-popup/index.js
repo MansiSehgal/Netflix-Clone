@@ -92,12 +92,7 @@ export default function DetailsPopup({ show, setShow }) {
 
       getMediaDetails();
     }
-  }, [
-    currentMediaInfoIdAndType,
-    loggedInAccount?._id,
-    setSimilarMedias,
-    setMediaDetails,
-  ]);
+  }, [currentMediaInfoIdAndType]);
 
   function handleClose() {
     setShow(false);

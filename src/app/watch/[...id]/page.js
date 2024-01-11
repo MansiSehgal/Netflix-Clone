@@ -1,3 +1,4 @@
+/* eslint-disable react-hooks/exhaustive-deps */
 "use client";
 
 import CircleLoader from "@/components/circle-loader";
@@ -46,7 +47,7 @@ export default function Watch() {
     }
 
     getMediaDetails();
-  }, [params, setPageLoader]);
+  }, [params]);
 
   if (pageLoader && mediaDetails === null) return <CircleLoader />;
 

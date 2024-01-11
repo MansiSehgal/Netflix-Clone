@@ -1,3 +1,4 @@
+/* eslint-disable react-hooks/exhaustive-deps */
 /* eslint-disable react-hooks/rules-of-hooks */
 "use client";
 
@@ -112,7 +113,7 @@ export default function medias() {
     }
 
     getAllMedias();
-  }, [loggedInAccount?._id, setPageLoader, session?.user?.uid, setMediaData]);
+  }, [loggedInAccount]);
 
   if (session === null) return <UnauthPage />;
   if (loggedInAccount === null) return <ManageAccounts />;
