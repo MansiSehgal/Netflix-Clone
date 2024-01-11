@@ -1,1 +1,1 @@
-# Netflix-Clone Next Js
+Next JS Netflix clone
