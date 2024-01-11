@@ -46,7 +46,7 @@ export default function Watch() {
     }
 
     getMediaDetails();
-  }, [params, pageLoader]);
+  }, [params, setPageLoader]);
 
   if (pageLoader && mediaDetails === null) return <CircleLoader />;
 

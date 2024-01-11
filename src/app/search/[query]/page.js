@@ -66,7 +66,7 @@ export default function Search() {
     }
 
     getSearchResults();
-  }, [loggedInAccount, pageLoader, session?.user?.uid, mediaData]);
+  }, [loggedInAccount?._id, setPageLoader, session?.user?.uid, setMediaData]);
 
   if (session === null) return <UnauthPage />;
   if (loggedInAccount === null) return <ManageAccounts />;

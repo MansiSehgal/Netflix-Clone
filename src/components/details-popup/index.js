@@ -1,3 +1,4 @@
+/* eslint-disable react-hooks/exhaustive-deps */
 "use client";
 import { motion } from "framer-motion";
 import MuiModal from "@mui/material/Modal";
@@ -91,7 +92,12 @@ export default function DetailsPopup({ show, setShow }) {
 
       getMediaDetails();
     }
-  }, [currentMediaInfoIdAndType, loggedInAccount, similarMedias, mediaDetails]);
+  }, [
+    currentMediaInfoIdAndType,
+    loggedInAccount?._id,
+    setSimilarMedias,
+    setMediaDetails,
+  ]);
 
   function handleClose() {
     setShow(false);

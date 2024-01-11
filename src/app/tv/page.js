@@ -95,7 +95,7 @@ export default function TV() {
     }
 
     getAllMedias();
-  }, [loggedInAccount, pageLoader, session?.user?.uid, mediaData]);
+  }, [loggedInAccount?._id, setPageLoader, session?.user?.uid, setMediaData]);
 
   if (session === null) return <UnauthPage />;
   if (loggedInAccount === null) return <ManageAccounts />;
